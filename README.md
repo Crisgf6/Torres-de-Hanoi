@@ -13,7 +13,7 @@ A lo largo de este segundo cuatrimestre, conforme he ido avanzando en la signatu
 
 El trabajo consiste en resolver el problema de las torres de Hanoi de manera iterativa y de manera recursiva, así como realizar una comparativa de coste temporal de las dos implementaciones.
 
-Para este proyecto he realizado el código de los dos algoritmos y luego también he hecho un código que hace resuelve las torres de Hanoi de una manera más visual.
+Para este proyecto he realizado el código de los dos algoritmos y luego también he hecho un código que resuelve las torres de Hanoi de una manera más visual.
 
 *2. Estudio*
 
