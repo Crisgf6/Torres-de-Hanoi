@@ -1,5 +1,3 @@
-<img src="https://github.com/Crisgf6/Torres-de-Hanoi/blob/main/assets/neb.PNG" width="150" height="auto">
-
 # Torres de Hanoi
 
 *“Dice la leyenda que, al crear el mundo, Dios situó sobre la Tierra tres varillas de diamante y sesenta y cuatro discos de oro que darían paso al fin del mundo cuando los monjes terminen su tarea…”*
