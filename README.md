@@ -1,2 +1,3 @@
+<img src="https://github.com/Crisgf6/Torres-de-Hanoi/blob/main/assets/neb.png" width="200" height="auto">
+
 # Torres de Hanoi
-Estudio de los algoritmos de resolución de las torres de Hanoi. Trabajo final de Análisis y diseño de Algoritmos.
