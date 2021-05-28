@@ -22,18 +22,35 @@ Para este proyecto he realizado el código de los dos algoritmos y luego tambié
 *	Si n es par, mueve el disco 1 hacia la derecha. Si es impar, muévelo hacia la izquierda.
 *	Si todos los discos están en C, fin. Si no, mueve un disco que no sea el 1 y vuelve al paso 1.
 
-Para obtener los siguientes resultados, he realizado 10 ejecuciones para cada implementación (con cada disco) y realizado una media del tiempo (en segundos) de ejecución para tratar de reducir el error.
+Para obtener resultados, he realizado 10 ejecuciones para cada implementación (con cada disco) y realizado una media del tiempo (en segundos) de ejecución para tratar de reducir el error. Para automatizar el cálculo de la media de las ejecuciones para cada disco, he implementado un bucle que ejecuta el algoritmo, mide el tiempo, y hace un cálculo de la media de las 10 ejecuciones de un mismo disco.
 
-**Esquema de los cálculos:**
+```cpp
+vector<double> times;
+for (int i=0; i<10; i++) {
+   t0 = clock();
+  
+   (algoritmo)
 
-<img src="https://github.com/Crisgf6/Torres-de-Hanoi/blob/main/assets/results.jpg" width="600" height="auto">
+   t1 = clock();
+   double time = (double(t1-t0)/CLOCKS_PER_SEC);
+   times.push_back(time);
+}
+// Cálculo de la media
+double medium = accumulate(times.begin(), times.end(), 0)/times.size();
+```
 
-**Tabla de resultados:**
+De la misma manera, el programa ejecuta el código para distintos números de discos (3-30). Se crea un vector de medias en el que se insertan las medias de las ejecuciones de cada disco para mostrarlas al final por pantalla. Gracias a este método he podido ahorrar tiempo y automatizar tareas como realizar las 10 ejecuciones para cada disco y calcular la media. 
 
-<img src="https://github.com/Crisgf6/Torres-de-Hanoi/blob/main/assets/tabla.PNG" width="auto" height="auto">
+Es cierto tambien que al no mostrar por pantalla cada movimiento, es decir, eliminar los ```cout``` , el tiempo de ejecución se reduce considerablemente ya que la accion de imprimir por pantalla es extremadamente lenta. En consecuencia, para obtener unos resultados significativos, me he visto obligado a realizar las pruebas con un numero mayor de discos. A continuación, se muestra una gráfica con dos lineas que representan las dos implementaciones (Iterativa y recursiva).
+
+**Gráfico de resultados:**
+
+<img src="https://github.com/Crisgf6/Torres-de-Hanoi/blob/main/assets/grafico.PNG" width="400" height="400">
 
 *3. Conclusiones*
 
 El algoritmo iterativo posee 3 ciclos. El primero se encarga del número de iteraciones, el segundo continua la división por 2 y el ultimo verifica cuantas veces se ha movido el disco antes. Esto los hace poseer un orden que los hace más eficientes que los recursivos. La implementación recursiva posee solo 1 ciclo if que verifica si existe ingresado un disco para proceder con el ordenamiento.
 
 El algoritmo iterativo es más lento en tiempo de ejecución. Posee un orden que los hace más entendibles que los recursivos. La implementación recursiva, en cambio, es más rápida en su ejecución y posee un código más sencillo que lo que hace es repetir el ciclo con cada 1 de los discos haciendo más corto el tiempo ya que no depende de una “iteración”.
+
+Cabe destacar que en la implementación reursiva, en vez de limitarme a escribir un mensaje con el movimiento, he creado tres pilas y he ejecutado los `top/pop/push` correspondientes para mover los discos entre ellas y ejecutar así realmente los movimientos.
