@@ -41,7 +41,7 @@ double medium = accumulate(times.begin(), times.end(), 0)/times.size();
 
 De la misma manera, el programa ejecuta el código para distintos números de discos (3-30). Se crea un vector de medias en el que se insertan las medias de las ejecuciones de cada disco para mostrarlas al final por pantalla. Gracias a este método he podido ahorrar tiempo y automatizar tareas como realizar las 10 ejecuciones para cada disco y calcular la media. 
 
-Es cierto tambien que al no mostrar por pantalla cada movimiento, es decir, eliminar los ```cout``` , el tiempo de ejecución se reduce considerablemente ya que la accion de imprimir por pantalla es extremadamente lenta. En consecuencia, para obtener unos resultados significativos, me he visto obligado a realizar las pruebas con un numero mayor de discos. A continuación, se muestra una gráfica con dos lineas que representan las dos implementaciones (Iterativa y recursiva).
+Es cierto tambien que al no mostrar por pantalla cada movimiento, es decir, eliminar los ```cout``` , el tiempo de ejecución se reduce considerablemente ya que la accion de imprimir por pantalla es extremadamente lenta. En consecuencia, para obtener unos resultados significativos, me he visto obligado a realizar las pruebas con un numero mayor de discos. A continuación, se muestra una gráfica con dos lineas que representan las dos implementaciones, iterativa (azul oscuro) y recursiva (azul claro). La gráfica muestra el tiempo de ejecución en el eje Y frente al numero de discos en el eje X.
 
 **Gráfico de resultados:**
 
