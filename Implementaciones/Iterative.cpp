@@ -29,7 +29,7 @@ int direccion(int d,int n) { //Cada disco se mueve en la misma dirección CW=1, 
 
 int main(){
     vector<double> medias;
-    for(int n=3;n<20;n++){
+    for(int n=3;n<30;n++){
         vector<double> times;
         for (int i=0; i<10; i++) {
             int t0 = clock();
