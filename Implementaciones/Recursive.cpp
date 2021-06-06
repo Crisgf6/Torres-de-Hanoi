@@ -28,7 +28,7 @@ void hanoi(int n, stack<int>& origen, stack<int>& destino, stack<int>& auxiliar)
 
 int main() {
     vector<double> medias;
-    for (int n = 3;n <= 30;n++) {
+    for (int n = 3;n <= 20;n++) {
         vector<double> times;
         for (int i = 0; i < 10; i++) {
             int t0 = clock();
@@ -49,7 +49,7 @@ int main() {
             times.push_back(tiempo);
         }
         //Cálculo de la media
-        double medium = accumulate(times.begin(), times.end(), 0) / times.size();
+        double medium = accumulate(times.begin(), times.end(), 0.f) /times.size();
         medias.push_back(medium);
     }
     int cont = 3;
