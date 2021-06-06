@@ -46,7 +46,7 @@ int main(){
             times.push_back(time);
         }
         //Cálculo de la media
-        double medium = accumulate(times.begin(), times.end(), 0)/times.size();
+        double medium = accumulate(times.begin(), times.end(), 0.f)/times.size();
         medias.push_back(medium);
     }
     int cont = 3;
